@@ -1,49 +1,48 @@
-# Conteúdo e origem dos materiais
+# Fontes e rastreabilidade
 
-Fonte principal: **Letícia Oliveira Santos. Do Eixo Viário ao Espaço de Permanência: Projeto de Qualificação Urbanística na Av. Antônio Carlos em Belo Horizonte/MG. UFMG, 2026.** Orientação: Hamilton Moreira Ferreira.
+Atualização: 15 de novembro de 2026.
 
-O PDF entregue possui 98 páginas físicas. No miolo, a página impressa é uma unidade maior que a página física. Os links `#page=` usam a página física.
+Fonte principal: Letícia Oliveira Santos. **Do Eixo Viário ao Espaço de Permanência: Projeto de Qualificação Urbanística na Av. Antônio Carlos em Belo Horizonte/MG**. Escola de Arquitetura da UFMG, 2026. Orientação: Hamilton Moreira Ferreira.
 
-| Conteúdo | Página impressa | Página física |
+## Versão da monografia
+
+O arquivo `dist/docs/leticia-oliveira-tcc.pdf` é a versão de trabalho fornecida em 15/11/2026, com 119 páginas físicas e 10.833.559 bytes. Substitui a versão anterior de 98 páginas. Os links `#page=` usam a página física, não a numeração impressa. O título editorial da apresentação não altera o título da monografia.
+
+| Conteúdo | Página física | Página impressa |
 | --- | --- | --- |
-| Identificação, autoria e orientação | Capa | 1 |
-| Objetivo: qualificação, escala humana e permanência | Resumo / 13–14 | 4 / 12–13 |
-| Método e formulário de 60 respostas | 39–42 | 38–41 |
-| Quatro setores | 62 | 61 |
-| Pampulha | 63–67 | 62–66 |
-| UFMG | 68–70 | 67–69 |
-| Cachoeirinha | 71–74 | 70–73 |
-| Lagoinha | 75–79 | 74–78 |
-| Áreas com potencial de intervenção, Mapa 10 | 82 | 81 |
-| Calçadas e travessias | 83–85 | 82–84 |
-| Espaços livres, arborização e praças | 81 / 86 | 80 / 85 |
-| Rede cicloviária, Mapa 11, e diretriz de faixas | 87 | 86 |
-| Expansão MOVE, Mapa 12 | 88 | 87 |
-| Uso misto, transporte e vida noturna | 89–90 | 88–89 |
-| Masterplano como etapa posterior | 90 | 89 |
+| Objetivo geral | 4, 12–13 | Resumo, 13–14 |
+| Mapa 5: quatro setores | 64 | 65 |
+| Pampulha | 65–69 | 66–70 |
+| UFMG | 70–72 | 71–73 |
+| Cachoeirinha | 73–76 | 74–77 |
+| Lagoinha | 77–81 | 78–82 |
+| Mapa 10: áreas com potencial de intervenção | 84 | 85 |
+| Mapa 11: rede cicloviária | 90 | 91 |
+| Mapa 12: expansão MOVE | 91 | 92 |
+| Área de estudo do Setor UFMG | 95–96 | 96–97 |
+| VLT, VLP e comparação dos cenários | 96–102 | 97–103 |
+| Diretrizes de intervenção | 103–104 | 104–105 |
+| Posto de Saúde São Francisco | 105 | 106 |
+| Rua Alentejo | 106 | 107 |
+| Rua Aimee Semple McPherson | 107 | 108 |
+| Acesso ao Parque Ecológico do Brejinho | 108 | 109 |
 
-Os textos do site são sínteses editoriais, não citações literais. Os quatro verbos organizadores são uma síntese das diretrizes, não capítulos originais da monografia. Os indicadores são 4 setores, 60 respostas e 3 referências teóricas; não se afirma representatividade estatística da amostra.
+O objetivo geral é a qualificação urbanística do eixo da avenida e seu entorno. O Setor UFMG é o recorte de aplicação projetual. As seis diretrizes foram sintetizadas a partir do capítulo 6.4; não substituem o diagnóstico geral. As 60 respostas são uma amostra exploratória, sem inferir representatividade estatística.
 
-## Imagens
+## Imagens e prancha
 
-| Arquivo no site | Material original | Observações |
-| --- | --- | --- |
-| `implantacao.png` | Prévia PNG incorporada ao arquivo `MAPA IMPLANTACAO.af` fornecido pelo usuário | 1024 × 724 px; sem legenda geográfica adicional inferida ou marcação de setores sobre esse desenho. |
-| `mapa-setores.webp` | Mapa 5, PDF61 | Extração original 1448 × 2048 px. |
-| `mapa-potencial-intervencao.webp` | Mapa 10, PDF81 | Extração original 1448 × 2048 px. |
-| `mapa-rede-cicloviaria.webp` | Mapa 11, PDF86 | Rede existente e prevista segundo Pedala BH; previsão não implica implantação. |
-| `mapa-extensao-move.webp` | Mapa 12, PDF87 | Proposta acadêmica; não é rede já executada. |
+- Os quatro mapas foram extraídos das imagens incorporadas no PDF atualizado, preservando legendas, fontes e créditos, e convertidos em WebP.
+- `saude.webp`, `alentejo.webp`, `aimee.webp` e `brejinho.webp` foram extraídos dos painéis gráficos incorporados nas páginas físicas 105–108 e otimizados para largura de 2400 px, incluindo situação atual e intervenção proposta. Não são fotografias de obras executadas.
+- `docs/prancha-passarela.pdf` é a prancha A3 de uma página fornecida em 15/11/2026. Planta e corte são recortes de uma renderização em 180 dpi, usados como `passarela-planta.webp` e `passarela-corte.webp`. O original disponível para consulta mantém o texto provisório que já continha.
+- `implantacao.png` preserva a prévia de 1024 × 724 px incorporada ao arquivo Affinity anteriormente fornecido. Sua cronologia em relação aos demais desenhos não é presumida.
+- Desenhos, cartografia e propostas: Letícia Oliveira Santos. Cartografia com base em BH Maps, 2026, conforme créditos do documento.
 
-Créditos dos mapas do PDF: Letícia Oliveira Santos; fonte dos dados BH Maps, 2026; SIRGAS 2000 / Zona 23S, UTM. As legendas incorporadas foram preservadas. As imagens das referências Seoul Skygarden/MVRDV e da minipraça no México não são apresentadas como projeto autoral e não foram usadas no site.
+## Maquete 3D interativa
 
-## Diagrama da via
+`urban-model.js` contém uma representação volumétrica procedimental e interpretativa das diretrizes, sem escala. O modelo 3D autoral não foi encontrado nas pastas locais consultadas. A maquete não é uma importação desse modelo e não reproduz geometria cadastral, dimensões, declividades, cotas ou estrutura da passarela.
 
-Esquema comparativo, sem escala, representando **um sentido**:
+As opções MOVE, MOVE + VLT e MOVE + VLP representam os cenários discutidos no capítulo 6.2. O MOVE permanece central e a complementação aparece nas laterais. Não há simulação de demanda ou viabilidade, comparação numérica de capacidades, nem indicação de escolha final de tecnologia. Volumes do entorno e a travessia são ilustrativos.
 
-- Referência descrita na p.87: 4 faixas comuns + 2 faixas do corredor MOVE.
-- Diretriz: 3 faixas comuns + 2 faixas MOVE + espaço liberado para ciclovia e melhoria dos passeios.
-- O texto menciona aproximadamente 4 m recuperados por lado e ressalva que a configuração de 12 faixas ocorre em grande parte da avenida. O site preserva essa limitação.
+## Implementação
 
-## Estado do projeto
-
-O PDF reúne diagnóstico e diretrizes, com masterplano e detalhamento indicados para continuidade posterior. O arquivo Affinity é apresentado como material de projeto sem inferir sua cronologia, aprovações ou execução.
+Sínteses editoriais em português. Fontes Manrope e Barlow Condensed locais, com licenças SIL OFL em `dist/assets/fonts/`. Site estático, sem bibliotecas remotas nem rastreamento. PDFs são carregados apenas quando solicitados. O desenho 3D renderiza sob interação e redimensionamento, sem ciclo contínuo de animação.
