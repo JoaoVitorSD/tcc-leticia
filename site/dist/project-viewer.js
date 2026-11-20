@@ -7,10 +7,11 @@
     a1: {name:'A1 / Viaduto José Alencar', views:[
       ['galeria-a1-praca','Praça suspensa','Travessia da avenida: implantação de infraestrutura de mobilidade ativa',''],
       ['galeria-a1-travessia','Vista da avenida','Travessia da avenida: implantação de infraestrutura de mobilidade ativa',''],
-      ['galeria-a1-rampa','Rampa de acesso','Travessia da avenida: implantação de infraestrutura de mobilidade ativa',''],
+      ['galeria-a1-noturna','Vista noturna','Travessia da avenida: implantação de infraestrutura de mobilidade ativa',''],
     ]},
     a2: {name:'A2 / Rua Aimee Semple McPherson', views:[
       ['galeria-a2-circuito','Circuito cicloviário','Ampliação e melhoria do circuito cicloviário local',''],
+      ['galeria-a2-rampa','Rampa de acesso','Implantação de praças permeáveis',''],
       ['galeria-a2-praca','Praça permeável','Implantação de praças permeáveis',''],
       ['galeria-a2-percurso-dia','Percurso diurno','Ampliação e melhoria do circuito cicloviário local',''],
       ['galeria-a2-percurso-noite','Percurso noturno','Ampliação e melhoria do circuito cicloviário local',''],
