@@ -31,6 +31,8 @@
 .project-hero .hero-description{font-size:clamp(22px,2.1vw,32px);line-height:1.35;font-weight:600;max-width:34ch}
 .header nav{gap:20px;font-size:12px}
 .header nav a{white-space:nowrap}
+.hero-bottom a{flex:1;min-width:0;align-items:flex-start;line-height:1.6}
+.area-tabs button{align-items:flex-start;line-height:1.5}
 .source-link{display:inline-block;margin-top:18px;font-size:11px;text-decoration:underline;text-underline-offset:3px;color:var(--brand-blue)}
 .chapter-items{display:grid;gap:7px;margin-top:25px}
 .chapter-items button{padding:11px 13px;min-height:44px;border:1px solid var(--brand-gray);background:white;text-align:left;border-radius:3px;font-size:12px;line-height:1.5}
@@ -70,6 +72,10 @@
 .perspective-details p:empty{display:none}
 @media(max-width:1180px){.header{flex-wrap:wrap}.header nav{order:3;flex-basis:100%;justify-content:space-between;gap:22px;overflow-x:auto}.header nav a{flex-shrink:0}.header-credit{margin-left:auto}}
 @media(max-width:760px){
+ .area-tabs{grid-template-columns:minmax(0,1fr)}
+ .area-tabs button{flex-direction:row;min-height:0;padding:14px;font-size:12px;align-items:flex-start}
+ .area-tabs button>span{width:32px;height:32px}
+ .perspective-stage{aspect-ratio:1.75}
  .header nav{justify-content:flex-start;font-size:11px;gap:22px;padding-bottom:3px}
  .header-credit{font-size:9px}
  .direction-card{grid-template-columns:84px minmax(0,1fr);gap:12px 14px}

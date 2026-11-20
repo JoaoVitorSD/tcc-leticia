@@ -1,25 +1,23 @@
 'use strict';
 
-// All views are images extracted from the author's supplied documents.
-// This gallery deliberately does not simulate unprovided 3D geometry.
+// Standalone project images supplied by the author on 20 November 2026.
 (() => {
   const asset = name => `assets/project-2026/${name}.webp`;
   const areas = {
     a1: {name:'A1 / Viaduto José Alencar', views:[
-      ['passarela-aerea','Vista aérea','Travessia da avenida: implantação de infraestrutura de mobilidade ativa','',7],
-      ['passarela-rua','Vista da avenida','Travessia da avenida: implantação de infraestrutura de mobilidade ativa','',2],
-      ['passarela-noite','Vista noturna','Travessia da avenida: implantação de infraestrutura de mobilidade ativa','',8],
-      ['passarela-permanencia','Praça suspensa','Travessia da avenida: implantação de infraestrutura de mobilidade ativa','',2],
+      ['galeria-a1-praca','Praça suspensa','Travessia da avenida: implantação de infraestrutura de mobilidade ativa',''],
+      ['galeria-a1-travessia','Vista da avenida','Travessia da avenida: implantação de infraestrutura de mobilidade ativa',''],
+      ['galeria-a1-rampa','Rampa de acesso','Travessia da avenida: implantação de infraestrutura de mobilidade ativa',''],
     ]},
     a2: {name:'A2 / Rua Aimee Semple McPherson', views:[
-      ['circuito-dia','Percurso diurno','Ampliação e melhoria do circuito cicloviário local','',3],
-      ['circuito-noite','Percurso noturno','Ampliação e melhoria do circuito cicloviário local','',9],
-      ['prancha-4','Praças e drenagem','Implantação de praças permeáveis','',4],
+      ['galeria-a2-circuito','Circuito cicloviário','Ampliação e melhoria do circuito cicloviário local',''],
+      ['galeria-a2-praca','Praça permeável','Implantação de praças permeáveis',''],
+      ['galeria-a2-percurso-dia','Percurso diurno','Ampliação e melhoria do circuito cicloviário local',''],
+      ['galeria-a2-percurso-noite','Percurso noturno','Ampliação e melhoria do circuito cicloviário local',''],
     ]},
     a3: {name:'A3 / Parque Ecológico do Brejinho', views:[
-      ['parque-entardecer','Vista do parque','Melhorias do Parque Ecológico do Brejinho','',10],
-      ['acesso-c','Acesso C','Melhorias do Parque Ecológico do Brejinho','',6],
-      ['prancha-6','Implantação e corte','Melhorias do Parque Ecológico do Brejinho','',6],
+      ['galeria-a3-entrada','Entrada do parque','Melhorias do Parque Ecológico do Brejinho',''],
+      ['galeria-a3-acesso-c','Acesso C','Melhorias do Parque Ecológico do Brejinho',''],
     ]},
   };
   const image = document.querySelector('#perspective-image');
@@ -31,7 +29,7 @@
   function current() { return areas[area].views[index]; }
   function caption() {
     const view=current();
-    return `${view[2]}. ${areas[area].name}. Perspectiva ou desenho do estudo preliminar fornecido por Letícia Oliveira Santos. Pranchas de projeto, página ${view[4]}.`;
+    return `${view[2]}. ${areas[area].name}. ${view[1]}. Imagem do projeto fornecida por Letícia Oliveira Santos em 20/11/2026.`;
   }
   function selectView(next) {
     const views=areas[area].views;
@@ -39,12 +37,12 @@
     const view=current(),ticket=++request;
     stage.setAttribute('aria-busy','true');
     document.querySelector('#perspective-error').hidden=true;
-    image.src=asset(view[0]); image.alt=`${view[2]}: ${view[3]}`;
+    image.src=asset(view[0]); image.alt=`${view[2]}: ${view[1]}`;
     document.querySelector('#perspective-area').textContent=areas[area].name;
     document.querySelector('#perspective-title').textContent=view[2];
     document.querySelector('#perspective-description').textContent=view[3];
     document.querySelector('#perspective-position').textContent=`Vista ${index+1} de ${views.length}`;
-    document.querySelector('#perspective-source').textContent=`Pranchas de projeto, página ${view[4]}. Imagem do estudo preliminar fornecido pela autora em 20/11/2026.`;
+    document.querySelector('#perspective-source').textContent='Imagem do projeto fornecida pela autora em 20/11/2026.';
     thumbs.querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));
     image.decode().then(()=>{if(ticket===request)stage.setAttribute('aria-busy','false');}).catch(()=>{
       if(ticket!==request)return;

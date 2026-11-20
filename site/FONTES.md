@@ -75,6 +75,8 @@ Os seis nomes das diretrizes são os da Figura 48, p. 104: Percorrer, Espaços d
 
 As imagens em `assets/project-2026/` são extrações ou renderizações do material fornecido, convertidas em WebP e redimensionadas para a web, sem geração de novos elementos de projeto. Algumas perspectivas são visualizações renderizadas ou ilustrativas; não representam obras executadas nem comprovam medidas, materiais ou viabilidade.
 
+A galeria "Imagens do projeto", abaixo das pranchas, utiliza os nove JPGs avulsos enviados posteriormente em 20/11/2026, convertidos para WebP sem cortes. As miniaturas foram redimensionadas para a web. A1 contém três imagens (praça suspensa, vista da avenida e rampa de acesso); A2 contém quatro (circuito cicloviário, praça permeável, percurso diurno e noturno); A3 contém duas (entrada do parque e acesso C). Os arquivos usam o prefixo `galeria-`. Os títulos de A1 e A3 são os das pranchas; A2 reúne os títulos do circuito cicloviário e das praças permeáveis.
+
 A galeria apresenta imagens do modelo, não um modelo 3D navegável. Não há GLB, GLTF, SKP, OBJ ou outro arquivo de geometria no ZIP. A maquete procedimental `urban-model.js` foi retirada para evitar divergência com o trabalho atual.
 
 ## Fotomontagens e comparações
