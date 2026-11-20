@@ -9,6 +9,8 @@
     canvas.outerHTML = '<p class="model-hint">A visualização 3D não está disponível neste navegador. Os cenários e as pranchas de projeto continuam disponíveis nesta página.</p>';
     return;
   }
+  const tokens = getComputedStyle(document.documentElement);
+  const palette = Object.fromEntries(['yellow','red','blue','sage','teal','gray'].map(key => [key, tokens.getPropertyValue(`--brand-${key}`).trim()]));
   let yaw = -.62, pitch = .72, zoom = 1, scenario = 'move', bridge = true;
   let width = 1, height = 1, frame = 0, faces = [], drag = null;
   const descriptions = {
@@ -38,7 +40,7 @@
     }
   }
   function tree(x,z,size=1) {
-    box(x,.4,z,.5,4*size,.5,'#9a9b85');
+    box(x,.4,z,.5,4*size,.5,palette.gray);
     // Faceted crown, with deterministic variation instead of random redraws.
     const cy=6*size, r=3*size, rings=5,sides=7;
     const point=(i,j)=>{
@@ -46,39 +48,39 @@
       return [x+Math.cos(lat)*Math.cos(lon)*r,cy+Math.sin(lat)*r*1.15,z+Math.cos(lat)*Math.sin(lon)*r];
     };
     for(let i=0;i<rings;i++)for(let j=0;j<sides;j++)
-      face([point(i,j),point(i+1,j),point(i+1,j+1),point(i,j+1)],tint('#638b76',.8+.22*(j%3)/2+.12*i/rings));
+      face([point(i,j),point(i+1,j),point(i+1,j+1),point(i,j+1)],tint(palette.sage,.8+.22*(j%3)/2+.12*i/rings));
   }
   function vehicle(x,z,color,length=6) {
     box(x,.3,z,2.25,1.25,length,color);
-    box(x,.9,z-.2,2.05,1.3,length*.72,'#d7e1e2');
-    box(x,1.3,z-.3,2.08,.65,length*.69,'#3a5765');
+    box(x,.9,z-.2,2.05,1.3,length*.72,'#ffffff');
+    box(x,1.3,z-.3,2.08,.65,length*.69,palette.blue);
     box(x,2,z-.2,2.12,.2,length*.72,color);
   }
   function build() {
     faces=[];
-    box(0,-2,0,88,2,152,'#b3c7c7');
-    box(0,0,0,44,.18,144,'#a4b2b7');
-    for(const x of [-25,25])box(x,.1,0,5,.3,144,'#d8d6ca');
-    box(0,.2,0,1.3,.35,144,'#cbd1c8');
+    box(0,-2,0,88,2,152,palette.gray);
+    box(0,0,0,44,.18,144,palette.gray);
+    for(const x of [-25,25])box(x,.1,0,5,.3,144,palette.sage);
+    box(0,.2,0,1.3,.35,144,palette.sage);
     // Central collective transport corridor, retained in all scenarios.
-    for(const x of [-4,4])box(x,.2,0,5.5,.1,144,'#668e9f');
+    for(const x of [-4,4])box(x,.2,0,5.5,.1,144,palette.teal);
     for(const x of [-21,-16,-11,11,16,21])for(let z=-66;z<69;z+=8)
-      box(x,.34,z,.12,.015,3.5,'#e6eeee');
-    for(const x of [-7.5,7.5])box(x,.24,0,.4,.35,143,'#d7daca');
+      box(x,.34,z,.12,.015,3.5,'#ffffff');
+    for(const x of [-7.5,7.5])box(x,.24,0,.4,.35,143,palette.sage);
     // Context volumes are intentionally abstract and not cadastral footprints.
     for(let side of [-1,1])for(let i=0;i<5;i++){
       const z=-55+i*27, x=side*(35+(i%2)*2),h=6+(i%3)*4;
-      box(x,.1,z,10,h,16,'#c6ced0');
-      box(x,h+.1,z,8,.45,14,'#e4e9e7');
-      for(let floor=3;floor<h;floor+=3)box(x-side*5.02,floor,z,.06,.75,12,'#a5b6bc');
+      box(x,.1,z,10,h,16,palette.gray);
+      box(x,h+.1,z,8,.45,14,'#ffffff');
+      for(let floor=3;floor<h;floor+=3)box(x-side*5.02,floor,z,.06,.75,12,palette.teal);
     }
-    vehicle(-4,-38,'#427b95',12);vehicle(4,30,'#427b95',12);
-    for(const [x,z]of [[-13,42],[-18,-23],[13,-40],[18,49],[-18,12],[18,5]])vehicle(x,z,'#eff1ed');
+    vehicle(-4,-38,palette.blue,12);vehicle(4,30,palette.blue,12);
+    for(const [x,z]of [[-13,42],[-18,-23],[13,-40],[18,49],[-18,12],[18,5]])vehicle(x,z,'#ffffff');
     if(scenario!=='move'){
       for(const x of [-12.5,12.5]){
-        box(x,.36,0,4.7,.05,142,scenario==='vlt'?'#bccdca':'#8eafb7');
-        if(scenario==='vlt')for(const dx of [-.7,.7])box(x+dx,.44,0,.1,.06,142,'#65797c');
-        vehicle(x,x<0?24:-26,scenario==='vlt'?'#39765f':'#2b718b',scenario==='vlt'?18:14);
+        box(x,.36,0,4.7,.05,142,scenario==='vlt'?palette.sage:palette.yellow);
+        if(scenario==='vlt')for(const dx of [-.7,.7])box(x+dx,.44,0,.1,.06,142,palette.gray);
+        vehicle(x,x<0?24:-26,scenario==='vlt'?palette.teal:palette.red,scenario==='vlt'?18:14);
       }
     }
     if(bridge){
@@ -88,17 +90,17 @@
       for(let i=0;i<=30;i++){
         const t=i/30;path.push([-26+52*t, Math.sin(t*Math.PI*2)*3]);
       }
-      strip(path,5,10,'#d6bb89');
-      for(const x of [-19,-6,7,20])box(x,.35,Math.sin((x+26)/52*Math.PI*2)*3,1,9.7,1,'#95a7aa');
+      strip(path,5,10,palette.yellow);
+      for(const x of [-19,-6,7,20])box(x,.35,Math.sin((x+26)/52*Math.PI*2)*3,1,9.7,1,palette.gray);
       for(const side of [-1,1]){
         const ramp=[];
         for(let i=0;i<=24;i++){const t=i/24;ramp.push([side*(26+Math.sin(t*Math.PI)*6),side*(t*42)]);}
-        strip(ramp,4,i=>10-i/24*9.6,'#d6bb89');
-        for(const z of [-51,51])box(side*28,.45,z,6,.2,12,'#b3c7ab');
+        strip(ramp,4,i=>10-i/24*9.6,palette.yellow);
+        for(const z of [-51,51])box(side*28,.45,z,6,.2,12,palette.sage);
       }
       // Edge lines on the crossing, and planted landings.
-      strip(path.map(([x,z])=>[x,z+2.45]),.18,11,'#71898c');
-      strip(path.map(([x,z])=>[x,z-2.45]),.18,11,'#71898c');
+      strip(path.map(([x,z])=>[x,z+2.45]),.18,11,palette.gray);
+      strip(path.map(([x,z])=>[x,z-2.45]),.18,11,palette.gray);
       for(const x of [-31,31])for(const z of [-8,8])tree(x,z,.85);
     }
     requestDraw();
@@ -115,14 +117,15 @@
   function draw(){
     frame=0;
     ctx.clearRect(0,0,width,height);
-    ctx.fillStyle='#dae5e7';ctx.fillRect(0,0,width,height);
+    ctx.fillStyle='#ffffff';ctx.fillRect(0,0,width,height);
+    ctx.fillStyle=palette.sage;ctx.globalAlpha=.28;ctx.fillRect(0,0,width,height);ctx.globalAlpha=1;
     const bounds=faces.flatMap(f=>f.points.map(rawProject));
     const xs=bounds.map(p=>p[0]),ys=bounds.map(p=>p[1]);
     const minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);
     centerX=(minX+maxX)/2;centerY=(minY+maxY)/2;
     cameraScale=Math.min((width-70)/(maxX-minX),(height-120)/Math.max(25,maxY-minY))*zoom;
     // Ground guide, for spatial orientation rather than decorative animation.
-    ctx.strokeStyle='#c8d8dc';ctx.lineWidth=.5;
+    ctx.strokeStyle=palette.gray;ctx.lineWidth=.5;
     for(let i=-80;i<=80;i+=10){
       for(const ends of [[[i,-2,-85],[i,-2,85]],[[-65,-2,i],[65,-2,i]]]){
         const a=project(ends[0]),b=project(ends[1]);ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();
