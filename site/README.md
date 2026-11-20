@@ -50,4 +50,20 @@ A maquete procedimental anterior foi retirada. O pacote contém PDFs e imagens, 
 
 ## Publicação
 
-O workflow `.github/workflows/pages.yml` publica `site/dist` no GitHub Pages após push na branch `master`. O acervo tem cerca de 72 MB, dos quais aproximadamente 62 MB são os três PDFs. Esses documentos não são carregados na navegação normal.
+O workflow `.github/workflows/pages.yml` executa os testes de empacotamento e `python3 site/build_pages.py` após push na branch `master`, publicando `site/_site` no GitHub Pages. O conteúdo de `dist` é preservado em `/tcc/`; a raiz redireciona para esse caminho, preservando parâmetros e âncoras. `site/_site` é uma saída gerada e ignorada pelo Git.
+
+Domínio de destino: `https://leticiaos.arq.br/tcc/`. O empacotamento gera URL canônica, metadados de compartilhamento, dados estruturados do trabalho, `robots.txt` e `https://leticiaos.arq.br/sitemap.xml`. O sitemap inclui a página canônica e as dez imagens da galeria, sem miniaturas duplicadas. Sua disponibilidade permite a descoberta pelos buscadores; ela não comprova indexação no Google.
+
+Para conferir a estrutura publicada localmente, a partir da raiz do repositório:
+
+```sh
+python3 -m unittest discover -s site -p test_build_pages.py
+python3 site/build_pages.py
+python3 -m http.server 4174 --bind 127.0.0.1 --directory site/_site
+```
+
+O domínio personalizado é configurado nas opções Pages do repositório. No Registro.br, o domínio raiz deve ter os quatro registros A e os quatro AAAA oficiais do GitHub Pages; `www` usa CNAME para `joaovitorsd.github.io`. O registro TXT de validação é obtido nas configurações Pages da conta proprietária. HTTPS depende da validação DNS e da emissão do certificado pelo GitHub.
+
+Referências: [GitHub Pages — domínio personalizado](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) e [Google — criação de sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).
+
+Os três PDFs somam aproximadamente 62 MB e não são carregados na navegação normal.

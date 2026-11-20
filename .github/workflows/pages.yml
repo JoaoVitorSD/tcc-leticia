@@ -5,6 +5,8 @@ on:
     branches: [master]
     paths:
       - 'site/dist/**'
+      - 'site/build_pages.py'
+      - 'site/test_build_pages.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -47,10 +49,17 @@ jobs:
           test -s site/dist/docs/leticia-oliveira-tcc.pdf
           test -s site/dist/docs/projeto-2026.pdf
           test -s site/dist/docs/fotomontagens-2026.pdf
+      - name: Preparar domínio e caminho do TCC
+        run: |
+          python3 -m unittest discover -s site -p 'test_build_pages.py'
+          python3 site/build_pages.py
+          test -s site/_site/tcc/index.html
+          test -s site/_site/sitemap.xml
+          test -s site/_site/robots.txt
       - name: Preparar apresentação
         uses: actions/upload-pages-artifact@v4
         with:
-          path: site/dist
+          path: site/_site
       - name: Publicar
         id: deployment
         uses: actions/deploy-pages@v4
