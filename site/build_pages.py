@@ -9,6 +9,8 @@ import xml.etree.ElementTree as ET
 DOMAIN = 'leticiaos.arq.br'
 ORIGIN = f'https://{DOMAIN}'
 CANONICAL = f'{ORIGIN}/tcc/'
+# Public verification value supplied by Google Search Console for this owner's site.
+GOOGLE_SITE_VERIFICATION = '1uwt7v7O4Q_SGMLlTJZNQe90L8YB1TIBckELI5tTQzU'
 SITE = Path(__file__).resolve().parent
 OUTPUT = SITE / '_site'
 
@@ -27,6 +29,7 @@ def add_metadata(html):
         'image': image,
     }
     tags = [
+        f'<meta name="google-site-verification" content="{GOOGLE_SITE_VERIFICATION}">',
         f'<link rel="canonical" href="{CANONICAL}">',
         '<meta name="robots" content="index,follow,max-image-preview:large">',
         '<meta property="og:type" content="website">',
@@ -76,6 +79,7 @@ def build(source=SITE / 'dist', output=OUTPUT):
     (output / 'index.html').write_text(f'''<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Letícia Oliveira Santos</title><meta name="robots" content="noindex,follow">
+<meta name="google-site-verification" content="{GOOGLE_SITE_VERIFICATION}">
 <link rel="canonical" href="{CANONICAL}"><meta http-equiv="refresh" content="0;url=tcc/">
 <script>location.replace(new URL('tcc/', location.href).pathname + location.search + location.hash);</script>
 </head><body><a href="tcc/">Abrir o trabalho de Letícia Oliveira Santos</a></body></html>

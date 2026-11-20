@@ -3,7 +3,7 @@ import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 
-from build_pages import build, CANONICAL, ORIGIN
+from build_pages import build, CANONICAL, ORIGIN, GOOGLE_SITE_VERIFICATION
 
 
 class PagesPackagingTest(unittest.TestCase):
@@ -28,6 +28,9 @@ class PagesPackagingTest(unittest.TestCase):
             output = root / 'output'
             build(source, output)
             html = (output / 'tcc/index.html').read_text()
+            verification = f'<meta name="google-site-verification" content="{GOOGLE_SITE_VERIFICATION}">'
+            self.assertIn(verification, html)
+            self.assertIn(verification, (output / 'index.html').read_text())
             self.assertIn(f'rel="canonical" href="{CANONICAL}"', html)
             self.assertIn('src="assets/project-2026/galeria-a1-praca.webp"', html)
             self.assertEqual((output / 'tcc/assets/project-2026/galeria-a1-praca.webp').read_bytes(), b'image')

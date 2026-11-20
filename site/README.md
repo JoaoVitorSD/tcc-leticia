@@ -54,6 +54,8 @@ O workflow `.github/workflows/pages.yml` executa os testes de empacotamento e `p
 
 Domínio de destino: `https://leticiaos.arq.br/tcc/`. O empacotamento gera URL canônica, metadados de compartilhamento, dados estruturados do trabalho, `robots.txt` e `https://leticiaos.arq.br/sitemap.xml`. O sitemap inclui a página canônica e as dez imagens da galeria, sem miniaturas duplicadas. Sua disponibilidade permite a descoberta pelos buscadores; ela não comprova indexação no Google.
 
+A propriedade HTTPS `https://leticiaos.arq.br/` do Google Search Console usa a metatag pública de verificação fornecida pelo Google, incluída na raiz e em `/tcc/`. Esse método permite validar a propriedade sem alterar novamente o DNS. Preserve a metatag após a confirmação da propriedade. O cadastro, a verificação e a submissão do sitemap são etapas separadas; somente a confirmação na interface do Google comprova a conclusão das duas últimas.
+
 Para conferir a estrutura publicada localmente, a partir da raiz do repositório:
 
 ```sh
