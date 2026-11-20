@@ -45,4 +45,4 @@ As opções MOVE, MOVE + VLT e MOVE + VLP representam os cenários discutidos no
 
 ## Implementação
 
-Sínteses editoriais em português. Fontes Manrope e Barlow Condensed locais, com licenças SIL OFL em `dist/assets/fonts/`. Site estático, sem bibliotecas remotas nem rastreamento. PDFs são carregados apenas quando solicitados. O desenho 3D renderiza sob interação e redimensionamento, sem ciclo contínuo de animação.
+Sínteses editoriais em português. Tipografia de interface: Arial, com alternativas Helvetica e sans-serif do sistema; títulos em peso 700. Os arquivos históricos de Manrope e Barlow Condensed e suas licenças SIL OFL permanecem em `dist/assets/fonts/`, mas não são carregados pela página. Site estático, sem bibliotecas remotas nem rastreamento. PDFs são carregados apenas quando solicitados. O desenho 3D renderiza sob interação e redimensionamento, sem ciclo contínuo de animação.
