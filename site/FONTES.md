@@ -18,6 +18,8 @@ A monografia é uma versão de trabalho com comentários de revisão visíveis. 
 
 ## Monografia: páginas físicas dos links
 
+A imagem de abertura foi substituída pelo PNG enviado em 20/11/2026 (`codex-clipboard-f3d756c1-330d-403c-860b-489d0d0dd435.png`), convertido para `assets/project-2026/abertura-passarela.webp`. A composição completa, seus textos e sua proporção foram preservados; a galeria mantém a extração do PDF de projeto.
+
 Nesta versão, as páginas de referência abaixo coincidem com os números impressos. Os links usam a página física.
 
 | Conteúdo | Página |
