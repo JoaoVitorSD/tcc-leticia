@@ -5,31 +5,22 @@
 (() => {
   const asset = name => `assets/project-2026/${name}.webp`;
   const areas = {
-    a1: {
-      name: 'A1 / Viaduto José Alencar',
-      views: [
-        ['passarela-aerea','Vista aérea','Travessia e permanência','A passarela associa a transposição da avenida a uma praça suspensa, áreas de descanso e percursos integrados à vegetação.',7],
-        ['passarela-rua','Vista da avenida','Infraestrutura de mobilidade ativa','A estrutura da passarela permite observar a relação entre o percurso elevado e o sistema viário existente.',2],
-        ['passarela-noite','Vista noturna','Iluminação ao longo do percurso','A perspectiva noturna evidencia os pórticos em madeira, os guarda-corpos e a iluminação proposta para orientar a circulação.',8],
-        ['passarela-permanencia','Praça suspensa','Pausa e convivência na travessia','Bancos e jardineiras ocupam os alargamentos do percurso, articulando permanência e circulação.',2],
-      ],
-    },
-    a2: {
-      name: 'A2 / Rua Aimee Semple McPherson',
-      views: [
-        ['circuito-dia','Percurso diurno','Continuidade para caminhar e pedalar','O circuito articula a Avenida Presidente Antônio Carlos ao Parque do Brejinho, com percursos para pedestres e ciclistas e áreas verdes junto ao córrego.',3],
-        ['circuito-noite','Percurso noturno','Uso do espaço para além do dia','A iluminação dos percursos e dos espaços de permanência integra a proposta de qualificação das áreas livres.',9],
-        ['prancha-4','Praças e drenagem','Espaços permeáveis no entorno','Percursos elevados e jardins de chuva associam conexão, permanência e manejo de águas pluviais. Amplie a prancha para consultar os cortes e as premissas.',4],
-      ],
-    },
-    a3: {
-      name: 'A3 / Parque Ecológico do Brejinho',
-      views: [
-        ['parque-entardecer','Vista do parque','Aproximação e entrada no parque','A perspectiva apresenta um dos acessos propostos, relacionando a entrada aos percursos de caminhada e bicicleta.',10],
-        ['acesso-c','Acesso C','Continuidade do percurso de entrada','O acesso C complementa as conexões propostas para aproximar o parque da vida cotidiana dos bairros do entorno.',6],
-        ['prancha-6','Implantação e corte','Acessos e topografia','Consulte a localização dos acessos A, B e C e o corte D-D na prancha de desenvolvimento projetual.',6],
-      ],
-    },
+    a1: {name:'A1 / Viaduto José Alencar', views:[
+      ['passarela-aerea','Vista aérea','Travessia da avenida: implantação de infraestrutura de mobilidade ativa','',7],
+      ['passarela-rua','Vista da avenida','Travessia da avenida: implantação de infraestrutura de mobilidade ativa','',2],
+      ['passarela-noite','Vista noturna','Travessia da avenida: implantação de infraestrutura de mobilidade ativa','',8],
+      ['passarela-permanencia','Praça suspensa','Travessia da avenida: implantação de infraestrutura de mobilidade ativa','',2],
+    ]},
+    a2: {name:'A2 / Rua Aimee Semple McPherson', views:[
+      ['circuito-dia','Percurso diurno','Ampliação e melhoria do circuito cicloviário local','',3],
+      ['circuito-noite','Percurso noturno','Ampliação e melhoria do circuito cicloviário local','',9],
+      ['prancha-4','Praças e drenagem','Implantação de praças permeáveis','',4],
+    ]},
+    a3: {name:'A3 / Parque Ecológico do Brejinho', views:[
+      ['parque-entardecer','Vista do parque','Melhorias do Parque Ecológico do Brejinho','',10],
+      ['acesso-c','Acesso C','Melhorias do Parque Ecológico do Brejinho','',6],
+      ['prancha-6','Implantação e corte','Melhorias do Parque Ecológico do Brejinho','',6],
+    ]},
   };
   const image = document.querySelector('#perspective-image');
   const stage = document.querySelector('.perspective-stage');
@@ -93,11 +84,10 @@
     });
   });
 
-  const scenarios={
-    move:['transporte-atual','O MOVE é mantido como eixo estruturador. O cenário de referência apresenta a configuração utilizada na comparação desenvolvida pela autora.','Figura 45 / Monografia, página 100. Diagrama ilustrativo; não representa uma solução executiva.'],
-    vlt:['transporte-vlt','O estudo considera um VLT nas faixas laterais como complemento ao MOVE. A alternativa depende da avaliação de demanda, topografia, cruzamentos e implantação de infraestrutura ferroviária.','Figura 46 / Monografia, página 101. Cenário acadêmico com complementação por VLT.'],
-    vlp:['transporte-vlp','O estudo considera um VLP nas faixas laterais como complemento ao MOVE. O desempenho depende da segregação, da pavimentação e da prioridade de circulação.','Figura 47 / Monografia, página 101. Cenário acadêmico com complementação por VLP.'],
-  };
+  const scenarios=Object.fromEntries(thesisContent.scenarios.map(item => [item.id,[
+    item.image,item.text,
+    `Figura ${item.figure} / ${item.title}. Monografia, p. ${item.figurePage}.`,
+  ]]));
   let scenario='move';
   document.querySelectorAll('[data-scenario]').forEach(b=>b.addEventListener('click',()=>{
     scenario=b.dataset.scenario;const data=scenarios[scenario];

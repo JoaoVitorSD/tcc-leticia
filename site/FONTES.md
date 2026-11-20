@@ -39,7 +39,23 @@ Nesta versão, as páginas de referência abaixo coincidem com os números impre
 | Figura 50: fluxos e áreas A1, A2 e A3 | 103 |
 | Aplicação das diretrizes | 104–106 |
 
-Mapas e diagramas foram extraídos das imagens incorporadas, preservando seus créditos. O mapa de fluxos usa base Google Earth e sobreposições autorais, conforme a monografia. Não foram interpretados limites cadastrais adicionais. Os seis grupos de diretrizes e os textos de apresentação são sínteses editoriais. As 60 respostas são uma amostra exploratória.
+Mapas e diagramas foram extraídos das imagens incorporadas, preservando seus créditos. O mapa de fluxos usa base Google Earth e sobreposições autorais, conforme a monografia. Não foram interpretados limites cadastrais adicionais.
+
+## Revisão de conteúdo e sequência do site
+
+A navegação e as seções principais seguem a sequência solicitada: Leitura do território, Diretrizes de intervenção, Fotomontagens, Projeto de estudo preliminar e Documentos. As perspectivas e a comparação dos cenários de transporte integram a seção do projeto. As dez pranchas são exibidas em um slide com miniaturas abaixo, sem avanço automático.
+
+Os parágrafos acadêmicos foram substituídos por transcrições da monografia, em vez das sínteses editoriais anteriores. `dist/territory-content.js` registra os trechos e suas páginas. Rótulos funcionais, nomes de imagens, metadados e controles de navegação continuam próprios da interface. A abertura usa as duas partes do título completo da monografia; as faixas cinzas da imagem ficam fora do enquadramento por CSS, preservando o arquivo recebido.
+
+| Tópico da leitura | Conteúdo e imagens de origem |
+| --- | --- |
+| Contexto histórico da avenida | Introdução, pp. 15–20; figuras 1, 2, 4 e 6 |
+| Contexto atual | Capítulo 3; Urbanização (p. 47), Zoneamento (p. 50), Iluminação (p. 52), Mobilidade (p. 54) e Segurança (p. 60); mapas 2–4, figuras 19 e 24 |
+| Análise dos setores | Capítulo 4, pp. 63–76; mapas 5–9 |
+| Áreas de intervenção | Capítulo 6; Mapa 13 na p. 94, Figura 49 na p. 102 e Figura 50 na p. 103, nessa ordem |
+| Mobilidade | Seção viária existente: Figura 45, p. 100; texto de comparação da seção 6.2.3, p. 99 |
+
+Os seis nomes das diretrizes são os da Figura 48, p. 104: Percorrer, Espaços de lazer, Modificar o uso, Diversificar, Uso noturno e Mobilidade integrada. Os ícones são recortes do próprio diagrama, e as cores dos nomes acompanham as categorias originais. Os textos foram transcritos das pp. 104–106. O objetivo é da p. 13 e o trecho de metodologia, da p. 40. Os comentários de revisão presentes na margem do PDF não foram usados como instruções ou conteúdo do site.
 
 ## Projeto: desenhos e perspectivas
 

@@ -23,12 +23,15 @@ A maquete procedimental anterior foi retirada. O pacote contém PDFs e imagens, 
 
 ## Experiência
 
-- Abertura com a perspectiva aérea atualizada da passarela e da praça suspensa.
-- Explorador das áreas A1, A2 e A3, com miniaturas, navegação entre vistas e ampliação.
+- Abertura com o título completo e a perspectiva enviada, com as faixas cinzas fora do enquadramento.
+- Menu e seções na ordem: Leitura do território, Diretrizes de intervenção, Fotomontagens, Projeto de estudo preliminar e Documentos.
+- Leitura organizada em Contexto histórico da avenida, Contexto atual, Análise dos setores, Áreas de intervenção e Mobilidade, com trechos transcritos e referências às páginas.
+- Diretrizes com os nomes, cores e ícones do diagrama da monografia.
+- Explorador das áreas A1, A2 e A3 dentro da seção do projeto, com miniaturas, navegação entre vistas e ampliação.
 - Cinco comparações por arraste entre situação existente e fotomontagem da proposta.
 - Atlas com cartografia da monografia atualizada, zoom e arraste.
 - Comparação dos cenários MOVE, MOVE + VLT e MOVE + VLP por diagramas da monografia.
-- Seis pranchas técnicas ampliáveis e acesso às 10 páginas do documento de projeto.
+- Dez pranchas exibidas em um slide, com miniaturas abaixo e ampliação.
 - Acervo com os três PDFs completos, carregados apenas quando solicitados.
 - Paleta aprovada e Arial com títulos em negrito; layout responsivo, foco visível, controles por teclado e respeito a movimento reduzido.
 
@@ -38,6 +41,8 @@ A maquete procedimental anterior foi retirada. O pacote contém PDFs e imagens, 
 - `dist/atlas.css`: identidade visual, tipografia e atlas.
 - `dist/project.css`: perspectivas, comparações e acervo.
 - `dist/app.js`: mapas e ampliação de imagens.
+- `dist/territory-content.js`: trechos da monografia e metadados de origem.
+- `dist/board-viewer.js`: navegação entre as dez pranchas.
 - `dist/project-viewer.js`: áreas, vistas, comparações e cenários.
 - `dist/assets/project-2026/`: imagens e miniaturas do pacote atualizado.
 - `dist/docs/`: documentos originais de consulta.
