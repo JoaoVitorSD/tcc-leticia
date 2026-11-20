@@ -1,6 +1,6 @@
-# Qualificação urbanística da Avenida Antônio Carlos
+# Qualificação urbanística e mobilidade ativa
 
-Apresentação do TCC de Letícia Oliveira Santos, Arquitetura e Urbanismo / UFMG, 2026. Atualizada com a monografia de 119 páginas e a prancha de travessia fornecidas em novembro de 2026.
+Apresentação do estudo preliminar de Letícia Oliveira Santos para a Avenida Presidente Antônio Carlos e entorno, Arquitetura e Urbanismo / UFMG, 2026.
 
 ## Abrir
 
@@ -8,33 +8,41 @@ Apresentação do TCC de Letícia Oliveira Santos, Arquitetura e Urbanismo / UFM
 python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 ```
 
-Abra http://127.0.0.1:4173. Também é possível abrir `dist/index.html` diretamente, mantendo toda a pasta `dist` junta. Não há instalação ou build para servir o site.
+Abra http://127.0.0.1:4173. Não há instalação ou build. Mantenha a pasta `dist` inteira para uso local.
 
-## Conteúdo
+## Acervo atual
 
-- Diagnóstico da avenida e quatro setores de análise.
-- Explorador com cinco mapas, zoom, arraste, teclado e diálogo ampliado.
-- Maquete 3D esquemática com rotação, zoom, planta, perspectiva e seção.
-- Cenários MOVE, MOVE + VLT e MOVE + VLP, conforme o capítulo 6.2.
-- Seis diretrizes de intervenção e aprofundamento projetual no Setor UFMG.
-- Planta e corte da passarela no Viaduto José Alencar.
-- Quatro pranchas de aplicação com imagem ampliável.
-- Método, autoria, orientação e acesso à monografia atualizada.
+Atualizado com o pacote PROJETO.zip fornecido em 20/11/2026:
 
-A maquete é uma interpretação volumétrica sem escala; o modelo original da autora não foi localizado. A interface e `FONTES.md` explicitam essa distinção.
+- Monografia TCB: 135 páginas; versão de trabalho que contém comentários de revisão.
+- Pranchas de projeto: 10 páginas, incluindo planta, cortes, passarela, praças, circuito e acessos ao parque.
+- Fotomontagens: 5 páginas, com situação existente, diretrizes e mapas-chave.
+- Imagem de apresentação enviada separadamente, preservada como referência no diretório de imagens.
+
+A maquete procedimental anterior foi retirada. O pacote contém PDFs e imagens, sem arquivo de geometria 3D. O explorador atual apresenta perspectivas e desenhos efetivamente fornecidos pela autora, sem sugerir rotação de um modelo inexistente.
+
+## Experiência
+
+- Abertura com a perspectiva aérea atualizada da passarela e da praça suspensa.
+- Explorador das áreas A1, A2 e A3, com miniaturas, navegação entre vistas e ampliação.
+- Cinco comparações por arraste entre situação existente e fotomontagem da proposta.
+- Atlas com cartografia da monografia atualizada, zoom e arraste.
+- Comparação dos cenários MOVE, MOVE + VLT e MOVE + VLP por diagramas da monografia.
+- Seis pranchas técnicas ampliáveis e acesso às 10 páginas do documento de projeto.
+- Acervo com os três PDFs completos, carregados apenas quando solicitados.
+- Paleta aprovada e Arial com títulos em negrito; layout responsivo, foco visível, controles por teclado e respeito a movimento reduzido.
 
 ## Editar
 
 - `dist/index.html`: conteúdo e estrutura.
-- `dist/atlas.css`: identidade visual, mapas, galerias e responsividade.
-- `dist/app.js`: mapas, seleção de setores e ampliação de imagens.
-- `dist/urban-model.js`: geometria e interação da maquete.
-- `dist/assets/`: imagens e fontes locais.
-- `dist/docs/`: monografia atualizada e prancha A3 original.
-- `FONTES.md`: versões, páginas e limites das representações.
-
-Em celular, o mapa usa seletor nativo, o 3D permite rotação horizontal preservando a rolagem vertical, e as colunas passam para o fluxo de leitura. Há foco visível, navegação por teclado, diálogos nativos e respeito à preferência por movimento reduzido.
+- `dist/atlas.css`: identidade visual, tipografia e atlas.
+- `dist/project.css`: perspectivas, comparações e acervo.
+- `dist/app.js`: mapas e ampliação de imagens.
+- `dist/project-viewer.js`: áreas, vistas, comparações e cenários.
+- `dist/assets/project-2026/`: imagens e miniaturas do pacote atualizado.
+- `dist/docs/`: documentos originais de consulta.
+- `FONTES.md`: proveniência e referências de páginas.
 
 ## Publicação
 
-O workflow `.github/workflows/pages.yml` publica `site/dist` no GitHub Pages quando esses arquivos são enviados à branch `master`. A atualização local não publica automaticamente. O conjunto tem cerca de 17 MB; a monografia tem 10,8 MB e carrega sob demanda.
+O workflow `.github/workflows/pages.yml` publica `site/dist` no GitHub Pages após push na branch `master`. O acervo tem cerca de 72 MB, dos quais aproximadamente 62 MB são os três PDFs. Esses documentos não são carregados na navegação normal.

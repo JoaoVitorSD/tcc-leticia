@@ -69,17 +69,17 @@ document.querySelector('#close-map').addEventListener('click', () => dialog.clos
 dialog.addEventListener('click', event => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); }});
 
 const sectors = {
-  pampulha: { name: 'Pampulha', title: 'Cultura, lazer e mobilidade.', description: 'A lagoa, o patrimônio, os equipamentos esportivos e a Estação Pampulha estruturam diferentes formas de chegar e permanecer. O setor articula a vida cotidiana com a paisagem e o lazer.', pages: '66–70', pdf: 65 },
-  ufmg: { name: 'UFMG', title: 'Educação e conexões cotidianas.', description: 'O campus e os bairros do entorno concentram deslocamentos. Grandes glebas e bordas viárias desafiam a continuidade dos percursos a pé e a aproximação entre a universidade e a cidade.', pages: '71–73', pdf: 70 },
-  cachoeirinha: { name: 'Cachoeirinha', title: 'Moradia, comércio e serviços.', description: 'O tecido residencial, os equipamentos e as identidades locais convivem com as marcas das transformações viárias. A qualificação dos espaços livres pode fortalecer as conexões e a vida do bairro.', pages: '74–77', pdf: 73 },
-  lagoinha: { name: 'Lagoinha', title: 'Patrimônio e acesso ao Centro.', description: 'Moradia, saúde, cultura e comércio encontram as barreiras do complexo viário. A interrupção da prioridade do MOVE e as dificuldades de travessia evidenciam a necessidade de reconectar esse território.', pages: '78–82', pdf: 77 }
+  pampulha: { name: 'Pampulha', title: 'Cultura, lazer e mobilidade.', description: 'A lagoa, o patrimônio, os equipamentos esportivos e a Estação Pampulha estruturam diferentes formas de chegar e permanecer. O setor articula a vida cotidiana com a paisagem e o lazer.', pages: '64–68', pdf: 64 },
+  ufmg: { name: 'UFMG', title: 'Educação e conexões cotidianas.', description: 'O campus e os bairros do entorno concentram deslocamentos. Grandes glebas e bordas viárias desafiam a continuidade dos percursos a pé e a aproximação entre a universidade e a cidade.', pages: '69–71', pdf: 69 },
+  cachoeirinha: { name: 'Cachoeirinha', title: 'Moradia, comércio e serviços.', description: 'O tecido residencial, os equipamentos e as identidades locais convivem com as marcas das transformações viárias. A qualificação dos espaços livres pode fortalecer as conexões e a vida do bairro.', pages: '72–75', pdf: 72 },
+  lagoinha: { name: 'Lagoinha', title: 'Patrimônio e acesso ao Centro.', description: 'Moradia, saúde, cultura e comércio encontram as barreiras do complexo viário. A interrupção da prioridade do MOVE e as dificuldades de travessia evidenciam a necessidade de reconectar esse território.', pages: '76–81', pdf: 76 }
 };
 const maps = {
-  implantacao: { image: 'assets/implantacao.png', label: 'DESENHO DE IMPLANTAÇÃO', kicker: 'O DESENHO', title: 'Desenho de implantação', description: 'O desenho de implantação aproxima o olhar das quadras, dos espaços livres e da estrutura da avenida. É o ponto de partida para imaginar outras relações entre movimento e permanência.', alt: 'Desenho de implantação fornecido pela autora, com quadras, edificações e estrutura viária.', source: 'Material de projeto<br>Letícia Oliveira Santos', extra: '' },
-  setores: { image: 'assets/mapa-setores.webp', label: 'QUATRO SETORES DE ANÁLISE', kicker: 'DIFERENTES FORMAS DE VIVER', title: 'Setores de análise', description: 'Pampulha, UFMG, Cachoeirinha e Lagoinha: a leitura por setores reconhece as diferenças de uso, paisagem e mobilidade ao longo da avenida. Selecione um território para conhecê-lo.', alt: 'Mapa dos quatro setores: Pampulha em azul, UFMG em vermelho, Cachoeirinha em verde e Lagoinha em amarelo.', source: 'Mapa 5 · p. 65 do trabalho<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=64" target="_blank" rel="noopener">Consultar no PDF ↗</a>', extra: 'sectors' },
-  potenciais: { image: 'assets/mapa-potencial-intervencao.webp', label: 'ÁREAS COM POTENCIAL DE INTERVENÇÃO', kicker: 'OPORTUNIDADES NO COTIDIANO', title: 'Áreas com potencial de intervenção', description: 'Canteiros, taludes, baixios de viadutos e lotes vagos aparecem como oportunidades de qualificação. O mapa identifica áreas de interesse para intervenções futuras, aproximando natureza, convivência e percursos.', alt: 'Mapa autoral de áreas com potencial de intervenção, incluindo baixios de viaduto, canteiros, lotes vagos, taludes e praças.', source: 'Mapa 10 · p. 85 do trabalho<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=84" target="_blank" rel="noopener">Consultar no PDF ↗</a>', extra: 'potential' },
-  ciclovias: { image: 'assets/mapa-rede-cicloviaria.webp', label: 'REDE CICLOVIÁRIA EXISTENTE E PREVISTA', kicker: 'MOBILIDADE ATIVA', title: 'Rede cicloviária existente e prevista', description: 'O levantamento compara a rede existente com a rede prevista pelo Pedala BH. A pesquisa propõe conectar a Pampulha à região central e integrar o pedalar à melhoria dos passeios e ao transporte coletivo.', alt: 'Mapa da rede cicloviária existente e prevista pelo Pedala BH no entorno da Avenida Antônio Carlos.', source: 'Mapa 11 · p. 91 do trabalho<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=90" target="_blank" rel="noopener">Consultar no PDF ↗</a>', extra: 'cycling' },
-  move: { image: 'assets/mapa-extensao-move.webp', label: 'PROPOSTA DE EXPANSÃO DO CORREDOR MOVE', kicker: 'TRANSPORTE COLETIVO', title: 'Expansão do corredor MOVE', description: 'A proposta acadêmica sugere dar continuidade aos corredores exclusivos até o Centro, a região hospitalar e a Savassi. A prioridade ao transporte coletivo busca melhorar a integração e a previsibilidade dos percursos.', alt: 'Esquema da proposta acadêmica de expansão do corredor exclusivo MOVE para a área central, região hospitalar e Savassi.', source: 'Mapa 12 · p. 92 do trabalho<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=91" target="_blank" rel="noopener">Consultar no PDF ↗</a>', extra: 'move' }
+  implantacao: { image: 'assets/project-2026/mapa-fluxos.webp', label: 'FLUXOS E ÁREAS DE INTERVENÇÃO', kicker: 'CONEXÕES LOCAIS', title: 'Fluxos e áreas de intervenção', description: 'O mapa de fluxos relaciona a entrada da UFMG, o circuito cicloviário, as praças e o Parque Ecológico do Brejinho. As áreas A1, A2 e A3 orientam o detalhamento das intervenções.', alt: 'Mapa de fluxos de pedestres e ciclistas e áreas A1, A2 e A3 da intervenção', source: 'Figura 50 · p. 103 da monografia<br>Letícia Oliveira Santos · Google Earth, sobreposições autorais', extra: '' },
+  setores: { image: 'assets/project-2026/mapa-setores.webp', label: 'QUATRO SETORES DE ANÁLISE', kicker: 'DIFERENTES FORMAS DE VIVER', title: 'Setores de análise', description: 'Pampulha, UFMG, Cachoeirinha e Lagoinha: a leitura por setores reconhece as diferenças de uso, paisagem e mobilidade ao longo da avenida. Selecione um território para conhecê-lo.', alt: 'Mapa dos quatro setores: Pampulha em azul, UFMG em vermelho, Cachoeirinha em verde e Lagoinha em amarelo.', source: 'Mapa 5 · p. 63 do trabalho<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=63" target="_blank" rel="noopener">Consultar no PDF ↗</a>', extra: 'sectors' },
+  potenciais: { image: 'assets/project-2026/mapa-potencial.webp', label: 'ÁREAS COM POTENCIAL DE INTERVENÇÃO', kicker: 'OPORTUNIDADES NO COTIDIANO', title: 'Áreas com potencial de intervenção', description: 'Canteiros, taludes, baixios de viadutos e lotes vagos aparecem como oportunidades de qualificação. O mapa identifica áreas de interesse para intervenções futuras, aproximando natureza, convivência e percursos.', alt: 'Mapa autoral de áreas com potencial de intervenção, incluindo baixios de viaduto, canteiros, lotes vagos, taludes e praças.', source: 'Mapa 10 · p. 83 do trabalho<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=83" target="_blank" rel="noopener">Consultar no PDF ↗</a>', extra: 'potential' },
+  ciclovias: { image: 'assets/project-2026/mapa-ciclovias.webp', label: 'REDE CICLOVIÁRIA EXISTENTE E PREVISTA', kicker: 'MOBILIDADE ATIVA', title: 'Rede cicloviária existente e prevista', description: 'O levantamento compara a rede existente com a rede prevista pelo Pedala BH. A pesquisa propõe conectar a Pampulha à região central e integrar o pedalar à melhoria dos passeios e ao transporte coletivo.', alt: 'Mapa da rede cicloviária existente e prevista pelo Pedala BH no entorno da Avenida Antônio Carlos.', source: 'Mapa 11 · p. 89 do trabalho<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=89" target="_blank" rel="noopener">Consultar no PDF ↗</a>', extra: 'cycling' },
+  move: { image: 'assets/project-2026/mapa-move.webp', label: 'PROPOSTA DE EXPANSÃO DO CORREDOR MOVE', kicker: 'TRANSPORTE COLETIVO', title: 'Expansão do corredor MOVE', description: 'A proposta acadêmica sugere dar continuidade aos corredores exclusivos até o Centro, a região hospitalar e a Savassi. A prioridade ao transporte coletivo busca melhorar a integração e a previsibilidade dos percursos.', alt: 'Esquema da proposta acadêmica de expansão do corredor exclusivo MOVE para a área central, região hospitalar e Savassi.', source: 'Mapa 12 · p. 90 do trabalho<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=90" target="_blank" rel="noopener">Consultar no PDF ↗</a>', extra: 'move' }
 };
 const tabs = Array.from(document.querySelectorAll('[data-map]'));
 function showSector(key) {
@@ -87,7 +87,7 @@ function showSector(key) {
   document.querySelector('#map-kicker').textContent = `SETOR ${sector.name.toUpperCase()}`;
   document.querySelector('#map-title').textContent = sector.title;
   document.querySelector('#map-description').textContent = sector.description;
-  document.querySelector('#map-source').innerHTML = `Mapa 5 · p. 65 / Leitura: pp. ${sector.pages}<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=${sector.pdf}" target="_blank" rel="noopener">Conhecer o setor no trabalho ↗</a>`;
+  document.querySelector('#map-source').innerHTML = `Mapa 5 · p. 63 / Leitura: pp. ${sector.pages}<br>Letícia Oliveira Santos · BH Maps, 2026<br><a href="docs/leticia-oliveira-tcc.pdf#page=${sector.pdf}" target="_blank" rel="noopener">Conhecer o setor no trabalho ↗</a>`;
   document.querySelectorAll('[data-sector-button]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.sectorButton === key)));
 }
 function selectMap(key) {
@@ -136,13 +136,28 @@ document.querySelector('#map-select').addEventListener('change', event => select
 document.querySelectorAll('[data-sector]').forEach(link => link.addEventListener('click', () => { selectMap('setores'); showSector(link.dataset.sector); }));
 
 const projectDialog = document.querySelector('#project-dialog');
-document.querySelectorAll('[data-image]').forEach(button => button.addEventListener('click', () => {
-  const image = document.querySelector('#project-dialog-image');
-  image.src = button.dataset.image;
-  image.alt = button.dataset.caption;
-  document.querySelector('#project-dialog-caption').textContent = button.dataset.caption;
-  projectDialog.showModal();
-}));
+let projectZoom = 1;
+const projectScroll = document.querySelector('.project-dialog-scroll');
+projectDialog.querySelector('.dialog-header').insertAdjacentHTML('afterend',
+  '<div class="project-dialog-tools" role="group" aria-label="Ampliação da imagem"><button id="project-zoom-out" aria-label="Reduzir imagem">−</button><output id="project-zoom-level" aria-live="polite">100%</output><button id="project-zoom-in" aria-label="Ampliar imagem">+</button><button id="project-zoom-reset" aria-label="Ajustar imagem à largura">⟲</button></div>');
+function renderProjectZoom() {
+  const image=document.querySelector('#project-dialog-image');
+  image.style.width=(projectZoom*100)+'%';
+  document.querySelector('#project-zoom-level').textContent=Math.round(projectZoom*100)+'%';
+  document.querySelector('#project-zoom-in').disabled=projectZoom>=3;
+  document.querySelector('#project-zoom-out').disabled=projectZoom<=1;
+}
+function openProjectImage(src, caption) {
+  const image=document.querySelector('#project-dialog-image');
+  image.src=src; image.alt=caption;
+  document.querySelector('#project-dialog-caption').textContent=caption;
+  projectZoom=1;renderProjectZoom();
+  projectDialog.showModal();projectScroll.scrollTo(0,0);
+}
+document.querySelector('#project-zoom-in').addEventListener('click',()=>{projectZoom=Math.min(3,projectZoom+.5);renderProjectZoom();});
+document.querySelector('#project-zoom-out').addEventListener('click',()=>{projectZoom=Math.max(1,projectZoom-.5);renderProjectZoom();});
+document.querySelector('#project-zoom-reset').addEventListener('click',()=>{projectZoom=1;renderProjectZoom();projectScroll.scrollTo(0,0);});
+document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>openProjectImage(button.dataset.image,button.dataset.caption)));
 document.querySelector('#close-project').addEventListener('click', () => projectDialog.close());
 projectDialog.addEventListener('click', event => { if (event.target === projectDialog) { const rect = projectDialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) projectDialog.close(); } });
 const navLinks = [...document.querySelectorAll('.header nav a')];

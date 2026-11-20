@@ -34,12 +34,14 @@ jobs:
       - name: Verificar JavaScript e arquivos principais
         run: |
           node --check site/dist/app.js
-          node --check site/dist/urban-model.js
+          node --check site/dist/project-viewer.js
           test -s site/dist/index.html
           test -s site/dist/atlas.css
+          test -s site/dist/project.css
           test -s site/dist/assets/implantacao.png
           test -s site/dist/docs/leticia-oliveira-tcc.pdf
-          test -s site/dist/docs/prancha-passarela.pdf
+          test -s site/dist/docs/projeto-2026.pdf
+          test -s site/dist/docs/fotomontagens-2026.pdf
       - name: Preparar apresentação
         uses: actions/upload-pages-artifact@v4
         with:
