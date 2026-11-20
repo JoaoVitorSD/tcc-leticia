@@ -14,7 +14,7 @@ Abra http://127.0.0.1:4173. Não há instalação ou build. Mantenha a pasta `di
 
 Atualizado com o pacote PROJETO.zip fornecido em 20/11/2026:
 
-- Monografia TCB: 135 páginas; versão de trabalho que contém comentários de revisão.
+- Monografia TCB: 135 páginas; arquivo atualizado recebido em 20/11/2026, com 13,9 MB e sem comentários de revisão.
 - Pranchas de projeto: 10 páginas, incluindo planta, cortes, passarela, praças, circuito e acessos ao parque.
 - Fotomontagens: 5 páginas, com situação existente, diretrizes e mapas-chave.
 - Imagem de apresentação enviada separadamente, preservada como referência no diretório de imagens.
@@ -68,4 +68,4 @@ O domínio personalizado é configurado nas opções Pages do repositório. No R
 
 Referências: [GitHub Pages — domínio personalizado](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) e [Google — criação de sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).
 
-Os três PDFs somam aproximadamente 62 MB e não são carregados na navegação normal.
+Os três PDFs somam aproximadamente 65 MB e não são carregados na navegação normal.

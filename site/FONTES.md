@@ -10,11 +10,11 @@ O pacote PROJETO.zip contém três PDFs. A grafia do nome original da prancha us
 
 | Arquivo de origem | Arquivo de consulta no site | Páginas | Bytes |
 | --- | --- | --- | --- |
-| TCB-Leticia-Oliveira.pdf | docs/leticia-oliveira-tcc.pdf | 135 | 10.312.898 |
+| TCB-Leticia-Oliveira.pdf | docs/leticia-oliveira-tcc.pdf | 135 | 13.851.562 |
 | OLIVEIRA SANTOS, Letícia. 2026.2PROJETO.pdf | docs/projeto-2026.pdf | 10 | 34.048.005 |
 | fotomontagens.pdf | docs/fotomontagens-2026.pdf | 5 | 17.297.004 |
 
-A monografia é uma versão de trabalho com comentários de revisão visíveis. Os documentos originais não foram editados. A fotografia enviada separadamente, PHOTO-2026-11-20-12-14-53.jpg, foi convertida para WebP como referência em `assets/project-2026/referencia-enviada.webp`; a perspectiva correspondente também está na página 7 do documento de projeto, e sua imagem incorporada foi usada no site com melhor qualidade.
+A monografia foi substituída pelo novo TCB-Leticia-Oliveira.pdf recebido em 20/11/2026 (13.851.562 bytes, 135 páginas), sem comentários de revisão. Os documentos originais não foram editados. A fotografia enviada separadamente, PHOTO-2026-11-20-12-14-53.jpg, foi convertida para WebP como referência em `assets/project-2026/referencia-enviada.webp`; a perspectiva correspondente também está na página 7 do documento de projeto, e sua imagem incorporada foi usada no site com melhor qualidade.
 
 ## Monografia: páginas físicas dos links
 
@@ -55,7 +55,7 @@ Os parágrafos acadêmicos foram substituídos por transcrições da monografia,
 | Áreas de intervenção | Capítulo 6; Mapa 13 na p. 94, Figura 49 na p. 102 e Figura 50 na p. 103, nessa ordem |
 | Mobilidade | Seção viária existente: Figura 45, p. 100; texto de comparação da seção 6.2.3, p. 99 |
 
-Os seis nomes das diretrizes são os da Figura 48, p. 104: Percorrer, Espaços de lazer, Modificar o uso, Diversificar, Uso noturno e Mobilidade integrada. Os ícones são recortes do próprio diagrama, e as cores dos nomes acompanham as categorias originais. Os textos foram transcritos das pp. 104–106. O objetivo é da p. 13 e o trecho de metodologia, da p. 40. Os comentários de revisão presentes na margem do PDF não foram usados como instruções ou conteúdo do site.
+Os seis nomes das diretrizes são os da Figura 48, p. 104: Percorrer, Espaços de lazer, Modificar o uso, Diversificar, Uso noturno e Mobilidade integrada. Os ícones são recortes do próprio diagrama, e as cores dos nomes acompanham as categorias originais. Os textos foram transcritos das pp. 104–106. O objetivo é da p. 13 e o trecho de metodologia, da p. 40. Os comentários de revisão da versão anterior não foram usados como instruções ou conteúdo do site.
 
 ## Projeto: desenhos e perspectivas
 
