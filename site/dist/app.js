@@ -70,22 +70,51 @@ dialog.addEventListener('click', event => { if (event.target === dialog) { const
 
 const tabs = [...document.querySelectorAll('[data-map]')];
 let activeChapter = 'historico', activeEntry = 0;
+const mapPanel = document.querySelector('#map-panel');
+const mapCanvas = mapPanel.querySelector('.map-canvas');
+const urbanizationMaps = document.createElement('div');
+urbanizationMaps.className = 'urbanization-maps';
+urbanizationMaps.hidden = true;
+mapCanvas.after(urbanizationMaps);
 function showEntry(index) {
   const chapter = thesisContent.chapters[activeChapter];
   activeEntry = (index + chapter.items.length) % chapter.items.length;
   const item = chapter.items[activeEntry];
-  mapImage.src = item.image;
+  const grouped = Boolean(item.images);
+  mapCanvas.hidden = !item.image;
+  urbanizationMaps.hidden = !grouped;
+  mapPanel.classList.toggle('is-text-only', !item.image && !grouped);
+  mapPanel.classList.toggle('is-map-group', grouped);
+  urbanizationMaps.replaceChildren();
+  if (item.image) mapImage.src = item.image;
+  else mapImage.removeAttribute('src');
+  for (const figure of item.images || []) {
+    const card = document.createElement('figure');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('aria-label',`Ampliar mapa: ${figure.title}`);
+    const image = document.createElement('img');
+    image.src = figure.image; image.alt = figure.title; image.loading = 'lazy';
+    button.append(image);
+    button.addEventListener('click',() => openProjectImage(figure.image, `${figure.title}. ${figure.figure}. Letícia Oliveira Santos.`));
+    const caption = document.createElement('figcaption');
+    caption.textContent = `${figure.title} / ${figure.figure}`;
+    card.append(button,caption); urbanizationMaps.append(card);
+  }
   mapImage.alt = item.title;
   document.querySelector('#map-label').textContent = item.figure || chapter.name;
   document.querySelector('#map-kicker').textContent = item.section || chapter.chapter;
   document.querySelector('#map-title').textContent = item.title;
   document.querySelector('#map-description').textContent = item.text;
   const source = document.querySelector('#map-source');
-  const link = document.createElement('a');
-  link.href = `docs/leticia-oliveira-tcc.pdf#page=${item.page}`;
-  link.target = '_blank'; link.rel = 'noopener';
-  link.textContent = `Monografia, p. ${item.page} / ${chapter.chapter}`;
-  source.replaceChildren(link);
+  source.replaceChildren();
+  for (const page of item.pages || [item.page]) {
+    const link = document.createElement('a');
+    link.href = `docs/leticia-oliveira-tcc.pdf#page=${page}`;
+    link.target = '_blank'; link.rel = 'noopener';
+    link.textContent = `Monografia, p. ${page} / ${chapter.chapter}`;
+    source.append(link);
+  }
   document.querySelectorAll('[data-entry]').forEach(button => button.setAttribute('aria-pressed',String(Number(button.dataset.entry) === activeEntry)));
   mapViewer.reset();
 }
@@ -94,6 +123,8 @@ function selectMap(key) {
   activeChapter = key;
   const chapter = thesisContent.chapters[key];
   const extra = document.querySelector('#map-extra');
+  if (key === 'atual') mapPanel.prepend(extra);
+  else mapPanel.querySelector('.map-story').append(extra);
   extra.replaceChildren();
   if (chapter.items.length > 1) {
     const group = document.createElement('div');

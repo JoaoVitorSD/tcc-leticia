@@ -50,7 +50,7 @@ Os parágrafos acadêmicos foram substituídos por transcrições da monografia,
 | Tópico da leitura | Conteúdo e imagens de origem |
 | --- | --- |
 | Contexto histórico da avenida | Introdução, pp. 15–20; figuras 1, 2, 4 e 6 |
-| Contexto atual | Capítulo 3; Urbanização (p. 47), Zoneamento (p. 50), Iluminação (p. 52), Mobilidade (p. 54) e Segurança (p. 60); mapas 2–4, figuras 19 e 24 |
+| Contexto atual | Três tópicos: Urbanização, Mobilidade e Segurança. Urbanização reúne os mapas ambiental, de zoneamento e de iluminação (mapas 2–4), com os textos das pp. 47, 50 e 52. Mobilidade (p. 54) e Segurança (p. 60) são apresentadas apenas em texto, sem as fotografias anteriores. |
 | Análise dos setores | Capítulo 4, pp. 63–76; mapas 5–9 |
 | Áreas de intervenção | Capítulo 6; Mapa 13 na p. 94, Figura 49 na p. 102 e Figura 50 na p. 103, nessa ordem |
 | Mobilidade | Seção viária existente: Figura 45, p. 100; texto de comparação da seção 6.2.3, p. 99 |

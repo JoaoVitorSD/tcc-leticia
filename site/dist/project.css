@@ -37,6 +37,18 @@
 .chapter-items{display:grid;gap:7px;margin-top:25px}
 .chapter-items button{padding:11px 13px;min-height:44px;border:1px solid var(--brand-gray);background:white;text-align:left;border-radius:3px;font-size:12px;line-height:1.5}
 .chapter-items button[aria-pressed=true]{border-color:var(--brand-blue);background:var(--brand-blue);color:white}
+.map-story #map-description{font-size:14px;line-height:1.9;white-space:pre-line;max-width:78ch}
+.map-source a+a{margin-left:18px}
+#map-panel>#map-extra{grid-column:1/-1;padding:16px 24px;border-bottom:1px solid var(--brand-gray)}
+#map-panel>#map-extra .chapter-items{display:flex;gap:8px;flex-wrap:wrap;margin:0}
+.atlas-layout.is-text-only,.atlas-layout.is-map-group{grid-template-columns:minmax(0,1fr)}
+.atlas-layout.is-text-only .map-story{max-width:95ch;width:100%}
+.urbanization-maps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:24px}
+.urbanization-maps[hidden]{display:none}
+.urbanization-maps button{display:block;width:100%;padding:8px;background:white;border:1px solid var(--brand-gray);border-radius:3px}
+.urbanization-maps img{width:100%;aspect-ratio:1/1.414;object-fit:contain}
+.urbanization-maps figcaption{font-size:11px;line-height:1.6;padding-top:10px}
+@media(max-width:760px){.urbanization-maps{grid-template-columns:minmax(0,1fr);padding:16px}.urbanization-maps figure{max-width:500px;width:100%;margin:auto}#map-panel>#map-extra{padding:14px 16px}.map-source a{display:block}.map-source a+a{margin-left:0}}
 .atlas-tabs{gap:8px}
 .atlas-tabs button{font-weight:600}
 .source-details{margin-top:36px;border-top:1px solid var(--brand-gray);padding-top:20px}

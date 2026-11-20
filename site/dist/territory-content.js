@@ -45,42 +45,48 @@ const thesisContent = {
       "items": [
         {
           "title": "Urbanização",
-          "image": "assets/project-2026/contexto-ambiental.webp",
           "page": 47,
-          "text": "Fato é que, o pensamento de expansão para trazer melhorias no tráfego não refletiu na escala humana, principalmente no que diz respeito ao trajeto que os pedestres enfrentam para percorrer ao longo da avenida. A partir da análise de dados do Google Earth e da percepção em campo, é possível notar a ausência de maciço arbóreo considerável nas calçadas e canteiros centrais de modo a trazer reforçar o desconforto térmico ao usuário.",
-          "figure": "Mapa 2 / página 49",
-          "section": "3.1 Urbanização"
-        },
-        {
-          "title": "Zoneamento",
-          "image": "assets/project-2026/contexto-zoneamento.webp",
-          "page": 50,
-          "text": "Por se tratar de uma área extensa, suas características se diferenciam ao longo do trajeto, conforme demonstra o Mapa de Zoneamento.",
-          "figure": "Mapa 3 / página 51",
-          "section": "3.1 Urbanização"
-        },
-        {
-          "title": "Iluminação",
-          "image": "assets/project-2026/contexto-iluminacao.webp",
-          "page": 52,
-          "text": "No quesito de iluminação pública, a partir da camada de mesmo nome no site BHMAPs, pode-se perceber que em grande parte, o objeto a ser iluminado é a via, o que reforça essa cultura rodoviarista. A iluminação viária é composta principalmente por postes direcionados para as vias com altos raios de abrangência, entretanto o que proporciona de segurança para os motoristas, consequentemente falta para os pedestres nas calçadas.",
-          "figure": "Mapa 4 / página 53",
-          "section": "3.1 Urbanização"
+          "text": "Fato é que, o pensamento de expansão para trazer melhorias no tráfego não refletiu na escala humana, principalmente no que diz respeito ao trajeto que os pedestres enfrentam para percorrer ao longo da avenida. A partir da análise de dados do Google Earth e da percepção em campo, é possível notar a ausência de maciço arbóreo considerável nas calçadas e canteiros centrais de modo a trazer reforçar o desconforto térmico ao usuário.\n\nPor se tratar de uma área extensa, suas características se diferenciam ao longo do trajeto, conforme demonstra o Mapa de Zoneamento.\n\nNo quesito de iluminação pública, a partir da camada de mesmo nome no site BHMAPs, pode-se perceber que em grande parte, o objeto a ser iluminado é a via, o que reforça essa cultura rodoviarista. A iluminação viária é composta principalmente por postes direcionados para as vias com altos raios de abrangência, entretanto o que proporciona de segurança para os motoristas, consequentemente falta para os pedestres nas calçadas.",
+          "section": "3.1 Urbanização",
+          "images": [
+            {
+              "title": "Indicadores ambientais",
+              "image": "assets/project-2026/contexto-ambiental.webp",
+              "figure": "Mapa 2 / página 49",
+              "page": 47,
+              "text": "Fato é que, o pensamento de expansão para trazer melhorias no tráfego não refletiu na escala humana, principalmente no que diz respeito ao trajeto que os pedestres enfrentam para percorrer ao longo da avenida. A partir da análise de dados do Google Earth e da percepção em campo, é possível notar a ausência de maciço arbóreo considerável nas calçadas e canteiros centrais de modo a trazer reforçar o desconforto térmico ao usuário."
+            },
+            {
+              "title": "Zoneamento",
+              "image": "assets/project-2026/contexto-zoneamento.webp",
+              "figure": "Mapa 3 / página 51",
+              "page": 50,
+              "text": "Por se tratar de uma área extensa, suas características se diferenciam ao longo do trajeto, conforme demonstra o Mapa de Zoneamento."
+            },
+            {
+              "title": "Iluminação",
+              "image": "assets/project-2026/contexto-iluminacao.webp",
+              "figure": "Mapa 4 / página 53",
+              "page": 52,
+              "text": "No quesito de iluminação pública, a partir da camada de mesmo nome no site BHMAPs, pode-se perceber que em grande parte, o objeto a ser iluminado é a via, o que reforça essa cultura rodoviarista. A iluminação viária é composta principalmente por postes direcionados para as vias com altos raios de abrangência, entretanto o que proporciona de segurança para os motoristas, consequentemente falta para os pedestres nas calçadas."
+            }
+          ],
+          "pages": [
+            47,
+            50,
+            52
+          ]
         },
         {
           "title": "Mobilidade",
-          "image": "assets/project-2026/contexto-mobilidade.webp",
           "page": 54,
           "text": "Atualmente os modais existentes na via são os veículos motorizados individuais, linhas de ônibus do transporte coletivo municipal que transitam nas pistas e linhas do sistema MOVE municipal e Metropolitano que utilizam a faixa exclusiva na parte central da via.",
-          "figure": "Figura 19 / página 54",
           "section": "3.2 Mobilidade"
         },
         {
           "title": "Segurança",
-          "image": "assets/project-2026/contexto-seguranca.webp",
           "page": 60,
           "text": "Nesse sentido, pode-se observar ao longo de toda a avenida que o transporte particular individual é privilegiado enquanto a circulação de pedestres é negligenciada, a exemplo da falta de passeios adequados, estreitos, sem acessibilidade adequada. Por conseguinte, gera uma sensação de insegurança e alerta, inibindo a utilização por parte da população, esse ciclo agrava ainda mais o afastamento das pessoas de ocupar os espaços públicos, deixando os espaços ermos, propensos a degradação.",
-          "figure": "Figura 24 / página 60",
           "section": "3.3 Segurança"
         }
       ]
