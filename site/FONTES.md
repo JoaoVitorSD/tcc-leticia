@@ -98,3 +98,7 @@ Os diagramas apresentados são as figuras 45–47 da monografia, cujo crédito o
 ## Interface
 
 Paleta fornecida pelo usuário: amarelo #f9c05d, vermelho #a22622, azul #006494, verde-claro #cbd49c e turquesa #57a3a7, com preto, branco e cinza. Arial, Helvetica e sans-serif do sistema; títulos em peso 700. Fontes históricas e documentos anteriores podem permanecer no repositório, mas não são usados na apresentação atual. Site estático, sem bibliotecas remotas, rastreamento ou carregamento automático de PDFs.
+
+## Substituição pontual da prancha 7
+
+Em 20/11/2026, a imagem do slide 7 foi substituída pelo PNG avulso `codex-clipboard-bcafc474-a1f0-436d-ae28-3b3193ede895.png`, fornecido pela autora. A conversão para WebP é sem perdas, preserva os 1600 × 800 pixels e não amplia nem recorta a imagem. A miniatura correspondente foi atualizada. A substituição vale somente para o visualizador de pranchas do site; os PDFs, a abertura e a galeria permanecem como fornecidos anteriormente.

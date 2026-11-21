@@ -11,7 +11,7 @@
   function selectBoard(index) {
     selected = (index + thumbs.length) % thumbs.length;
     const currentRequest = ++request;
-    const src = `assets/project-2026/prancha-${selected + 1}.webp`;
+    const src = `assets/project-2026/prancha-${selected + 1}.webp${selected === 6 ? "?v=passarela-atualizada" : ""}`;
     const title = caption();
     stage.setAttribute('aria-busy','true');
     image.src = src; image.alt = title;
